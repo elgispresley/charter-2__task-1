@@ -25,8 +25,8 @@ dayOfWeek();
 // ? Reverse
 
 function reverseNumber(n) {
-	n = n + "";
-	return n.split("").reverse().join("");
+  n = n + "";
+  return n.split("").reverse().join("");
 }
 console.log(Number(reverseNumber(213456)));
 
@@ -49,7 +49,7 @@ console.log(factorial(5));
 
 // ? More Less
 
-function moreLess(num1,num2) {
+function moreLess(num1, num2) {
   if (num1 > num2) {
     return (
       "Большее из этих чисел " + num1 + " и " + num2 + ", будет " + num1 + "."
@@ -62,15 +62,15 @@ function moreLess(num1,num2) {
     return "Числа " + num1 + " и " + num2 + " равны.";
   }
 }
-console.log(moreLess(31,30));
+console.log(moreLess(31, 30));
 
 // ? converting
 
-function convertingToString (arr) {
-     console.log(arr.toString(''));
-	  console.log(arr.join(' + '));
+function convertingToString(arr) {
+  console.log(arr.toString(""));
+  console.log(arr.join(" + "));
 }
-convertingToString(arr=["Red", "Green", "White", "Black"])
+convertingToString((arr = ["Red", "Green", "White", "Black"]));
 
 // ? Get month
 
@@ -90,7 +90,7 @@ function monthName(n) {
     "December",
   ];
   return monthArr[n.getMonth()];
-};
+}
 console.log(monthName(new Date("09/26/2021")));
 console.log(monthName(new Date("11/13/2014")));
 
@@ -109,18 +109,18 @@ upper_case("abcd");
 
 // ? draw smile
 
-const string1 = document.getElementById('string-1')
-const string2 = document.getElementById('string-2')
-const string3 = document.getElementById('string-3')
-const string4 = document.getElementById('string-4')
-const string5 = document.getElementById('string-5')
-const string6 = document.getElementById('string-6')
-console.log(string3)
-console.log(string5)
-console.log(string2)
-console.log(string6)
-console.log(string4)
-console.log(string1)
+const string1 = document.getElementById("string-1");
+const string2 = document.getElementById("string-2");
+const string3 = document.getElementById("string-3");
+const string4 = document.getElementById("string-4");
+const string5 = document.getElementById("string-5");
+const string6 = document.getElementById("string-6");
+console.log(string3);
+console.log(string5);
+console.log(string2);
+console.log(string6);
+console.log(string4);
+console.log(string1);
 
 const elements = document.querySelectorAll(".element");
 const elementClass = elements[0].className;
@@ -131,8 +131,6 @@ elements[2].classList.add("red");
 elements[3].classList.add("green");
 elements[4].classList.add("green");
 elements[5].classList.add("green");
-
-
 
 const todo = document.getElementById("todo-list");
 let tasks = [
@@ -159,19 +157,40 @@ todo.innerHTML = `
 //   `;
 // }
 
-
-
-const paragraf = document.querySelectorAll('p')
+const paragraf = document.querySelectorAll("p");
 for (const item of paragraf) {
-	const newElement = document.createElement('div')
-	newElement.innerHTML = `<hr class="hr">`;
-	item.after(newElement);
+  const newElement = document.createElement("div");
+  newElement.innerHTML = `<hr class="hr">`;
+  item.after(newElement);
 }
 
 
 
-const item = document.querySelectorAll('.item');
-for (const i of item) {
-	console.log(i)
-}
 
+const cart_items = document.getElementById("cart-items");
+const itemCola = document.querySelector(".item_cola");
+itemCola.remove();
+
+
+const fish = document.createElement("div");
+fish.innerHTML = ` <div class="item_bar">Canned Fish<span class="qty">x 4</span></div>`;
+
+const itemBar = document.querySelector(".item_bar");
+cart_items.replaceChild(fish, itemBar);
+
+
+
+const button = document.getElementById('button');
+button.onclick = function() {
+    let promptValue = prompt("Напишите вашу задачу")
+	 const ul = document.querySelector('.ul')
+    const tag_li = document.createElement('div')
+	 tag_li.innerHTML = `<li class="li">${promptValue}</li>`
+	 if (promptValue === "") {
+		 alert("Вы ничего не ввели, давайте по новой :) ")
+	 } else if (promptValue === null) {
+       return
+	 } else {
+		 return  ul.prepend(tag_li)	 
+	}
+};
