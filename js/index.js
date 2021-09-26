@@ -164,13 +164,9 @@ for (const item of paragraf) {
   item.after(newElement);
 }
 
-
-
-
 const cart_items = document.getElementById("cart-items");
 const itemCola = document.querySelector(".item_cola");
 itemCola.remove();
-
 
 const fish = document.createElement("div");
 fish.innerHTML = ` <div class="item_bar">Canned Fish<span class="qty">x 4</span></div>`;
@@ -178,19 +174,17 @@ fish.innerHTML = ` <div class="item_bar">Canned Fish<span class="qty">x 4</span>
 const itemBar = document.querySelector(".item_bar");
 cart_items.replaceChild(fish, itemBar);
 
-
-
-const button = document.getElementById('button');
-button.onclick = function() {
-    let promptValue = prompt("Напишите вашу задачу")
-	 const ul = document.querySelector('.ul')
-    const tag_li = document.createElement('div')
-	 tag_li.innerHTML = `<li class="li">${promptValue}</li>`
-	 if (promptValue === "") {
-		 alert("Вы ничего не ввели, давайте по новой :) ")
-	 } else if (promptValue === null) {
-       return
-	 } else {
-		 return  ul.prepend(tag_li)	 
-	}
+const button = document.getElementById("button");
+button.onclick = function () {
+  let promptValue = prompt("Напишите вашу задачу");
+  const ul = document.querySelector(".ul");
+  const tag_li = document.createElement("div");
+  tag_li.innerHTML = `<li class="li">${promptValue}</li>`;
+  if (promptValue === "") {
+    alert("Вы ничего не ввели, давайте по новой :) ");
+  } else if (promptValue === null) {
+    return;
+  } else {
+    return ul.prepend(tag_li);
+  }
 };
