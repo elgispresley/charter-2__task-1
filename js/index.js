@@ -1,34 +1,34 @@
-// // ? today
-// function dayOfWeek() {
-//   let today = new Date();
-//   let day = today.getDay();
-//   let daylist = [
-//     "Sunday",
-//     "Monday",
-//     "Tuesday",
-//     "Wednesday ",
-//     "Thursday",
-//     "Friday",
-//     "Saturday",
-//   ];
-//   console.log("Today is : " + daylist[day] + ".");
-//   let hour = today.getHours();
-//   let minute = today.getMinutes();
-//   let second = today.getSeconds();
-//   let prepand = " PM ";
-//   console.log(
-//     "Current Time : " + hour + prepand + " : " + minute + " : " + second
-//   );
-// }
-// dayOfWeek();
+// ? today
+function dayOfWeek() {
+  let today = new Date();
+  let day = today.getDay();
+  let daylist = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday ",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  console.log("Today is : " + daylist[day] + ".");
+  let hour = today.getHours();
+  let minute = today.getMinutes();
+  let second = today.getSeconds();
+  let prepand = " PM ";
+  console.log(
+    "Current Time : " + hour + prepand + " : " + minute + " : " + second
+  );
+}
+dayOfWeek();
 
-// // ? Reverse
+// ? Reverse
 
-// function reverseNumber(n) {
-// 	n = n + "";
-// 	return n.split("").reverse().join("");
-// }
-// console.log(Number(reverseNumber(213456)));
+function reverseNumber(n) {
+	n = n + "";
+	return n.split("").reverse().join("");
+}
+console.log(Number(reverseNumber(213456)));
 
 // ? Factorial
 
@@ -39,88 +39,88 @@
 // 	console.log(input)
 // }
 
-// function factorial(n) {
-//   if (n === 0) {
-//     return 1;
-//   }
-//   return n * factorial(n - 1);
-// }
-// console.log(factorial(5));
+function factorial(n) {
+  if (n === 0) {
+    return 1;
+  }
+  return n * factorial(n - 1);
+}
+console.log(factorial(5));
 
-// // ? More Less
+// ? More Less
 
-// function moreLess(num1,num2) {
-//   if (num1 > num2) {
-//     return (
-//       "Большее из этих чисел " + num1 + " и " + num2 + ", будет " + num1 + "."
-//     );
-//   } else if (num1 < num2) {
-//     return (
-//       "Большее из этих чисел " + num1 + " и " + num2 + ", будет " + num2 + "."
-//     );
-//   } else {
-//     return "Числа " + num1 + " и " + num2 + " равны.";
-//   }
-// }
-// console.log(moreLess(31,30));
+function moreLess(num1,num2) {
+  if (num1 > num2) {
+    return (
+      "Большее из этих чисел " + num1 + " и " + num2 + ", будет " + num1 + "."
+    );
+  } else if (num1 < num2) {
+    return (
+      "Большее из этих чисел " + num1 + " и " + num2 + ", будет " + num2 + "."
+    );
+  } else {
+    return "Числа " + num1 + " и " + num2 + " равны.";
+  }
+}
+console.log(moreLess(31,30));
 
-// // ? converting
+// ? converting
 
-// function convertingToString (arr) {
-//      console.log(arr.toString(''));
-// 	  console.log(arr.join(' + '));
-// }
-// convertingToString(arr=["Red", "Green", "White", "Black"])
+function convertingToString (arr) {
+     console.log(arr.toString(''));
+	  console.log(arr.join(' + '));
+}
+convertingToString(arr=["Red", "Green", "White", "Black"])
 
-// // ? Get month
+// ? Get month
 
-// function monthName(n) {
-//   monthArr = [
-//     "January",
-//     "February",
-//     "March",
-//     "April",
-//     "May",
-//     "June",
-//     "July",
-//     "August",
-//     "September",
-//     "October",
-//     "November",
-//     "December",
-//   ];
-//   return monthArr[n.getMonth()];
-// };
-// console.log(monthName(new Date("09/26/2021")));
-// console.log(monthName(new Date("11/13/2014")));
+function monthName(n) {
+  monthArr = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+  return monthArr[n.getMonth()];
+};
+console.log(monthName(new Date("09/26/2021")));
+console.log(monthName(new Date("11/13/2014")));
 
-// // ? check Uppercase
+// ? check Uppercase
 
-// function upper_case(str) {
-//   check = /^[A-Z]/;
-//   if (check.test(str)) {
-//     console.log("Первый символ строки, в верхнем регистре");
-//   } else {
-//     console.log("Первый символ строки, не в верхнем регистре");
-//   }
-// }
-// upper_case("Abcd");
-// upper_case("abcd");
+function upper_case(str) {
+  check = /^[A-Z]/;
+  if (check.test(str)) {
+    console.log("Первый символ строки, в верхнем регистре");
+  } else {
+    console.log("Первый символ строки, не в верхнем регистре");
+  }
+}
+upper_case("Abcd");
+upper_case("abcd");
 
-// // ? draw smile
+// ? draw smile
 
-// const string1 = document.getElementById('string-1')
-// const string2 = document.getElementById('string-2')
-// const string3 = document.getElementById('string-3')
-// const string4 = document.getElementById('string-4')
-// const string5 = document.getElementById('string-5')
-// const string6 = document.getElementById('string-6')
-// console.log(string3)
-// console.log(string5)
-// console.log(string2)
-// console.log(string6)
-// console.log(string4)
-// console.log(string1)
+const string1 = document.getElementById('string-1')
+const string2 = document.getElementById('string-2')
+const string3 = document.getElementById('string-3')
+const string4 = document.getElementById('string-4')
+const string5 = document.getElementById('string-5')
+const string6 = document.getElementById('string-6')
+console.log(string3)
+console.log(string5)
+console.log(string2)
+console.log(string6)
+console.log(string4)
+console.log(string1)
 
 const elements = document.querySelectorAll(".element");
 const elementClass = elements[0].className;
